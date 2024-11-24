@@ -13,8 +13,8 @@ def digit_sum(value):
     ans = 0
 
     while value > 0:
-        ans += value % 10  # Extract the last digit and add it to the sum
-        value //= 10       # Remove the last digit
+        ans = ans + (value % 10)  # Extract the last digit and add it to the sum
+        value = value //10       # Remove the last digit
 
     return ans
 
