@@ -14,7 +14,7 @@ def palindrome(phrase):
         str: "Palindrome" if the input is a palindrome, otherwise "Not a Palindrome".
     """
     # Initialize variables
-    
+
     length = len(phrase)
     i = 0
 
@@ -22,7 +22,7 @@ def palindrome(phrase):
     while i < length // 2:
         if phrase[i] != phrase[length - i - 1]:
             return "Not a Palindrome"
-        i += 1
+        i = i + 1
 
     return "Palindrome"
 
