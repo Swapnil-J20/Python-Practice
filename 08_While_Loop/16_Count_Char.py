@@ -1,4 +1,4 @@
-# Write a program to calculate the cumulative sum of a list
+# Write a program to count the frequency of each character in a string using a loop. Example: Input: "banana" → Output: { 'b': 1, 'a': 3, 'n': 2 }
 
 def count_char(data, debug=False):
     """
@@ -17,7 +17,9 @@ def count_char(data, debug=False):
     result = {}
 
     while i < length:
+        
         char = data[i]
+        
         # Debug print: Current character and dictionary state
         if debug:
             print(f"Step {i + 1}: Processing character '{char}'")
@@ -25,7 +27,7 @@ def count_char(data, debug=False):
 
         # Update the count for each character
         if char in result:
-            result[char] += 1
+            result[char] = result[char] + 1
         else:
             result[char] = 1
 
@@ -54,4 +56,3 @@ def main():
 # Entry Point of the program
 if __name__ == "__main__":
     main()
-
