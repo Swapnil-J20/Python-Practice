@@ -11,6 +11,7 @@ def all_prime(value, debug=False):
     Returns:
         list: A list of prime numbers between 1 and value.
     """
+
     prime = []
 
     for i in range(2, value + 1):  # Start from 2, as 1 is not a prime number
@@ -29,7 +30,6 @@ def all_prime(value, debug=False):
                 print(f"{i} is a prime number.")
 
     return prime
-
 
 def main():
     try:
