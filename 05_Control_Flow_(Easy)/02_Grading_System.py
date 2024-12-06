@@ -5,7 +5,7 @@ Grade_A = 90
 Grade_B = 80
 Grade_C = 70
 Grade_D = 60
-Grade_F = 60
+
 
 
 def result(marks):
