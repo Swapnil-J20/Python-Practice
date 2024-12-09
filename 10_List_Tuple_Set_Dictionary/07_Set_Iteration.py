@@ -4,60 +4,60 @@
 For Loop: Yes
 For Loop with Index: No
 While Loop with Index: No
+List Comprehension: Yes
+Enumerate: Yes
+Reverse Iteration: No (Conversion to list required)
 """
 
 def main():
+	data = {11, 37, 69, 83, 105, 37, 11, 69}  # Sample set with duplicates
 
-	data = {11, 37, 69, 83, 105, 37, 11, 69}
-
-	# Using For Loop
-	print("Step 1: Output using For Loop: ")
-	
+	# Step 1: Using For Loop
+	print("Step 1: Output using For Loop:")
 	for item in data:
-		print(item, end = " ")
-
+		print(item, end=" ")
 	print("\n" + "_" * 60)
 
-	# For Loop with Index doesn't execute with Set due to Unordered nature
-	print("\nStep 2: For Loop with Index doesn't apply to Set")
-	
+	# Step 2: For Loop with Index (Not Applicable)
+	print("Step 2: For Loop with Index is not applicable to Sets (Unordered nature):")
 	try:
 		for i in range(len(data)):
-			print(data[i])
-
+			print(data[i])  # Attempt to access via index
 	except TypeError as er:
-		print(f"	Error: {er}", end = " ")
+		print(f"   Error: {er}")
+	print("_" * 60)
 
-	print("\n" + "_" * 60)
-
-	# While Loop with Index doesn't execute with Set due to its Unordered nature
-	print("\nStep 3: While Loop with Index doesn't apply to Set")
-
+	# Step 3: While Loop with Index (Not Applicable)
+	print("Step 3: While Loop with Index is not applicable to Sets (Unordered nature):")
 	try:
 		i = 0
 		length = len(data)
-
 		while i < length:
-			print(data[i])
+			print(data[i])  # Attempt to access via index
+			i += 1
 	except TypeError as err:
-		print(f"	Error: {err}", end = " ")
+		print(f"   Error: {err}")
+	print("_" * 60)
 
+	# Step 4: Using List Comprehension
+	print("Step 4: Using List Comprehension:")
+	[print(item, end=" ") for item in data]
 	print("\n" + "_" * 60)
 
-	# Using List Comprehension for Iteration
-	print("\nStep 4: Using List Comprehension")
-
-	[print(item, end = " ") for item in data]
-
-	print("\n" + "_" * 60)
-
-	# Using Enumerate for Index and Value
-	print("\nStep 5: Using Index and Value")
-
+	# Step 5: Using Enumerate
+	print("Step 5: Using Enumerate (Index and Value):")
 	for i, item in enumerate(data):
 		print(f"Index {i}: Value: {item}")
+	print("_" * 60)
 
-	print("\n" + "_" * 60)
+	# Step 6: Reverse Iteration (Not Directly Possible)
+	print("Step 6: Reverse Iteration (Not Directly Possible):")
+	try:
+		for item in reversed(data):  # Attempting reverse iteration directly
+			print(item, end=" ")
+	except TypeError as err:
+		print(f"   Error: {err}")
+	print("_" * 60)
 
 
 if __name__ == "__main__":
