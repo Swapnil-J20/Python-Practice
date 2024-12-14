@@ -12,7 +12,25 @@ def sorting(data, debug = False):
 		result (list): Sorted list.
 	"""
 	
-	
+	length = len(data)
+
+	for i in range(length):
+		if debug:
+			print(f"Pass {i + 1}: Starting with list: {data}")
+
+		# Compare adjacent elements and swap if necessary
+		for j in range(length - i - 1):
+			if data[j] > data[j + 1]:
+				# Swap elements
+				data[j], data[j + 1] = data[j + 1], data[j]
+
+				if debug:
+					print(f"Swapped {data[j + 1]} and {data[j]}: {data}")
+
+		if debug:
+			print(f"Pass {i + 1}: Resulting list: {data}")
+
+	return data
 
 
 def main():
