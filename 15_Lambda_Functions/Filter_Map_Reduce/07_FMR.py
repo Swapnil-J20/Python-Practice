@@ -1,15 +1,6 @@
+from functools import reduce
 
-
-
-
-
-
-
-
-
-
-
-
+CheckEven = lambda No:(No % 2 == 0)
 
 def main():
 	print("Enter number of elements you want to enter : ")
@@ -23,7 +14,9 @@ def main():
 
     print("Data is : ",Data_Input)
 
+    Data_Filter = list(filter(CheckEven, Data_Input))
 
+    print("Data after filter is : ",Data_Filter)
 
 
 
