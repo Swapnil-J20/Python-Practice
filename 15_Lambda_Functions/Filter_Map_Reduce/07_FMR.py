@@ -2,6 +2,8 @@ from functools import reduce
 
 CheckEven = lambda No:(No % 2 == 0)
 
+Doubles = lambda No: No * 2
+
 def main():
 	print("Enter number of elements you want to enter : ")
     iSize = int(input())
@@ -18,7 +20,9 @@ def main():
 
     print("Data after filter is : ",Data_Filter)
 
+    Data_Map = list(map(Doubles, Data_Filter))
 
+    print("Data after map is : ",Data_Map)
 
 
 
